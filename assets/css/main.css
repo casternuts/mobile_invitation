@@ -1347,7 +1347,7 @@ a.back-to-top:focus {
 
 .background-change-wrap {
     height: 100vh;
-    padding-bottom: 100px;
+    padding-bottom: 20px;
 }
 
 .background-change-wrap>div {
@@ -1361,8 +1361,8 @@ a.back-to-top:focus {
 
 .background-change-wrap>div>h2 {
     margin: 0;
-    padding: 20px;
-    line-height: 40px;
+    padding: 10px;
+    line-height: 20px;
     background: black;
     color: white;
     position: sticky;
@@ -1385,11 +1385,11 @@ a.back-to-top:focus {
 }
 
 .need-margin {
-    margin: 200px 20px 200px;
+    margin: 40px 20px 20px;
 }
 
 .need-small-margin {
-    margin: 20px 20px 200px;
+    margin: 20px 20px 20px;
 }
 
 
