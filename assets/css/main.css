@@ -1378,7 +1378,7 @@ a.back-to-top:focus {
 .background-change-wrap>div>img {
     position: sticky;
     width: 100%;
-    height: calc(100% - 80px);
+/*     height: calc(100% - 80px); */
     object-fit: cover;
 }
 
