@@ -1377,7 +1377,14 @@ a.back-to-top:focus {
 .background-change-wrap>div>img {
     position: sticky;
     width: 100%;
-    height: calc(100% - 80px);
+    height: 100vh !important;
+    object-fit: cover;
+}
+
+.card-main-photo {
+    position: sticky;
+    width: 100%;
+    height: 100vh !important;
     object-fit: cover;
 }
 
@@ -1457,7 +1464,7 @@ a.back-to-top:focus {
 .slide-up-wrap>div>img {
     width: 100%;
     height: auto;
-    max-width: 80vw;
+    max-width: 90vw;
     max-height: 80vh;
     object-fit: cover;
 }
