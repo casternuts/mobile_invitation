@@ -295,12 +295,11 @@ a.back-to-top:focus {
 }
 
 .section-padding {
-    padding: 60px 0;
-    margin-bottom: 250px;
+    padding: 40px 0px 20px 0px;
 }
 
 .section-padding2 {
-    padding: 100px 0;
+    padding: 20px 0px 0px 0px;
 }
 
 @-webkit-keyframes fadeIn {
@@ -344,6 +343,7 @@ a.back-to-top:focus {
     -webkit-animation-name: fadeInDown;
     animation-name: fadeInDown;
     background: #fff !important;
+    visibility: hidden;
 }
 
 .top-nav-collapse .navbar-brand {
@@ -1425,15 +1425,11 @@ a.back-to-top:focus {
     justify-content: center;
 }
 
-.slide-up-wrap-parent {
-    height: 1000px;
-}
-
 .slide-up-wrap {
     height: 300vh;
     align-items: center;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 10px;
 }
 
 .slide-up-wrap>h2 {
@@ -1449,7 +1445,7 @@ a.back-to-top:focus {
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     overflow: hidden;
 }
 
