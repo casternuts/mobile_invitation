@@ -300,7 +300,7 @@ a.back-to-top:focus {
 }
 
 .section-padding2 {
-    padding: 60px 0;
+    padding: 100px 0;
 }
 
 @-webkit-keyframes fadeIn {
@@ -1389,7 +1389,7 @@ a.back-to-top:focus {
 }
 
 .need-small-margin {
-    margin: 20px 20px 20px;
+    margin: 200px 20px 200px;
 }
 
 
