@@ -213,17 +213,28 @@
             </div>
             <div class="row justify-content-center">
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/8.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/8.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/9.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/9.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/10.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/10.jpg" alt="Card image cap">
                 </div>
                 <div class="card" style="width: 18rem;">
-                    <img class="card-img-top" src="assets/img/11.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/11.jpg" alt="Card image cap">
                 </div>
+            </div>
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
+
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
+
+                <!-- Modal Content (The Image) -->
+                <img class="modal-content center-block" id="img01">
+
+
             </div>
 
 
@@ -266,10 +277,10 @@
                     </h2>
                     <div class="section-info">
                         <div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center;">
-                            <a target="_blank" style="margin-right:12px;" onclick="$(&quot;.insbox&quot;).show();$(&quot;.inss&quot;).hide();$(&quot;#ins_tmap&quot;).show();" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&amp;name=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;lon=127.12246451531&amp;lat=37.3873395397425"><img src="assets/img/map_navi_button-tmap.png" height="66"></a>
-                            <a target="_blank" style="margin-right:12px;" onclick="return not_for_pc()" href="http://m.atlan.co.kr/searchPlus/linkAtlan.do?shareType=kakao&amp;coordX=127.12246451531&amp;coordY=37.3873395397425&amp;title=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;AuthKey=2b1ffc4c97acca5a359282739535a280576c02aa0cc4c89b86afca8e20bdc7e8"><img src="assets/img/map_navi_button-atlan.png" height="66"></a>
+                            <a target="_blank" style="margin-right:12px;" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&amp;name=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;lon=127.12246451531&amp;lat=37.3873395397425"><img src="assets/img/map_navi_button-tmap.png" height="66"></a>
+                            <a target="_blank" style="margin-right:12px;" href="http://m.atlan.co.kr/searchPlus/linkAtlan.do?shareType=kakao&amp;coordX=127.12246451531&amp;coordY=37.3873395397425&amp;title=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;AuthKey=2b1ffc4c97acca5a359282739535a280576c02aa0cc4c89b86afca8e20bdc7e8"><img src="assets/img/map_navi_button-atlan.png" height="66"></a>
                             <a style="margin-right:12px;" href="https://map.naver.com/?menu=location&pinType=place&lat=37.3873395397425&lng=127.12246451531&title=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4"><img src="assets/img/map_navi_button-naver.png" height="66"></a>
-                            <a style="margin-right: 12px;" onclick="kakao_navi();$('.insbox').hide();"><img src="assets/img/map_navi_button-kakao.png" height="66"></a>
+                            <a style="margin-right: 12px;" onclick="kakao_navi();"><img src="assets/img/map_navi_button-kakao.png" height="66"></a>
 
                         </div>
                     </div>
@@ -278,7 +289,8 @@
                     </div>
                 </div>
                 <div class="text-center">
-                    <img class="img-fluid" src="assets/img/map.PNG" alt="">
+                    <div id="map" style="width:95vw;height:400px;"></div>
+
                 </div>
                 <div class="text-center">
                     <img class="img-fluid" src="assets/img/loca.PNG" alt="">
@@ -470,19 +482,34 @@
     </script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type="text/javascript">
-        Kakao.init('13da3914377346b0b8f74f5309b49dad');
+        // Get the modal
+        var modal = document.getElementById("myModal");
 
-        function kakao_navi() {
-            if (is_pc == '1') {
-                alert('모바일 기기 전용 기능입니다')
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.querySelectorAll(".gallery-img");
+        var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        for (let i in img) {
+            img[i].onclick = function() {
+                modal.style.display = "block";
+                modalImg.src = this.src;
+                captionText.innerHTML = this.alt;
             }
-            Kakao.Navi.start({
-                name: '%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4',
-                x: 127.12246451531,
-                y: 37.3873395397425,
-                coordType: 'wgs84'
-            });
+
         }
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        //'13da3914377346b0b8f74f5309b49dad'
+        Kakao.init('3039813ca47b6ef3d515a98fb4bb8d0e');
+
 
         function app_install(appname) {
 
@@ -512,6 +539,53 @@
             window.open(store_url)
 
         }
+    </script>
+
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3039813ca47b6ef3d515a98fb4bb8d0e"></script>
+    <script>
+        function kakao_navi() {
+
+            Kakao.Navi.start({
+                name: '%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4',
+                x: 127.12246451531,
+                y: 37.3873395397425,
+                coordType: 'wgs84'
+            });
+        }
+
+        var container = document.getElementById('map');
+        var options = {
+            center: new kakao.maps.LatLng(37.387454, 127.122392),
+            level: 4
+        };
+
+        var map = new kakao.maps.Map(container, options);
+
+
+        markerPosition = new kakao.maps.LatLng(37.387454, 127.122392); // 마커가 표시될 위치입니다
+
+        // 마커를 생성합니다
+        var marker = new kakao.maps.Marker({
+            position: markerPosition,
+
+        });
+
+        // 마커가 지도 위에 표시되도록 설정합니다
+        marker.setMap(map);
+
+
+
+        //37.4546149, 127.0024915
+        // 커스텀 오버레이가 표시될 위치입니다 37.3874152,127.1202673
+        var position = new kakao.maps.LatLng(37.387454, 127.122392);
+        var iwContent = '<div style="padding:5px;">라온스퀘어 <br><a href="https://map.kakao.com/link/map/라온스퀘어,37.387454,127.122392" style="color:blue" target="_blank">큰지도보기</a> <a href="https://map.kakao.com/link/to/라온스퀘어,37.387454,127.122392" style="color:blue" target="_blank">길찾기</a></div>';
+
+        // 인포윈도우를 생성합니다
+        var infowindow = new kakao.maps.InfoWindow({
+            position: position,
+            content: iwContent
+        });
+        infowindow.open(map, marker);
     </script>
 
 
