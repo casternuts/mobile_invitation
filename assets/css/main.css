@@ -5,6 +5,7 @@ html {
     overflow-x: hidden;
 }
 
+
 body {
     background: #fff;
     font-size: 14px;
@@ -18,6 +19,10 @@ body {
     line-height: 25px;
     -webkit-backface-visibility: hidden;
     backface-visibility: hidden;
+    height: 100vh;
+    /* Use vh as a fallback for browsers that do not support Custom Properties */
+    height: calc(var(--vh, 1vh) * 100);
+    min-height: -webkit-fill-available;
 }
 
 h1,
