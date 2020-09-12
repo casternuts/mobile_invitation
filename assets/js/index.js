@@ -32,7 +32,7 @@ function handleScroll() {
     const changeBgImg = document.querySelector('.background-change-wrap > div');
     const { top: bgTop, height: bgHeight } = changeBgSection.getBoundingClientRect();
     if (bgTop < 0) {
-        const rate = (-1) * bgTop / 4;
+        const rate = (-1) * bgTop / 3;
         changeBgImg.style.filter = `grayscale(${rate}%)`;
         changeBgImg.style.opacity = `${(100-rate/5) / 100}`;
     } else {
