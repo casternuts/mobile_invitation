@@ -1431,7 +1431,8 @@ a.back-to-top:focus {
 }
 
 .slide-up-wrap {
-    height: 300vh;
+/*     height: 300vh; */
+    min-height: -webkit-fill-available;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
