@@ -1389,7 +1389,7 @@ a.back-to-top:focus {
 }
 
 .need-small-margin {
-    margin: 200px 20px 200px;
+    margin: 20px 20px 200px;
 }
 
 
@@ -1430,7 +1430,7 @@ a.back-to-top:focus {
 }
 
 .slide-up-wrap {
-    height: 400vh;
+    height: 300vh;
     align-items: center;
     justify-content: center;
     margin-top: 40px;
