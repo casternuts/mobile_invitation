@@ -202,18 +202,26 @@
                         오시는 길
                     </h2>
                     <div class="section-info">
-                        경기도 성남시 분당구 라온스퀘어 8층
+                        <div style="box-sizing: border-box; -moz-box-sizing: border-box; -webkit-box-sizing: border-box; text-align: center;">
+                            <a target="_blank" style="margin-right:12px;" onclick="$(&quot;.insbox&quot;).show();$(&quot;.inss&quot;).hide();$(&quot;#ins_tmap&quot;).show();" href="https://apis.openapi.sk.com/tmap/app/routes?appKey=l7xx20401a447f994002b83f0e74e5482a2d&amp;name=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;lon=127.12246451531&amp;lat=37.3873395397425"><img src="assets/img/map_navi_button-tmap.png" height="66"></a>
+                            <a target="_blank" style="margin-right:12px;" onclick="return not_for_pc()" href="http://m.atlan.co.kr/searchPlus/linkAtlan.do?shareType=kakao&amp;coordX=127.12246451531&amp;coordY=37.3873395397425&amp;title=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&amp;AuthKey=2b1ffc4c97acca5a359282739535a280576c02aa0cc4c89b86afca8e20bdc7e8"><img src="assets/img/map_navi_button-atlan.png" height="66"></a>
+                            <a style="margin-right:12px;" href="https://map.naver.com/?menu=location&pinType=place&lat=37.3873395397425&lng=127.12246451531&title=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4"><img src="assets/img/map_navi_button-naver.png" height="66"></a>
+                            <a style="margin-right: 12px;" onclick="kakao_navi();$('.insbox').hide();"><img src="assets/img/map_navi_button-kakao.png" height="66"></a>
+
+                        </div>
+                    </div>
+                    <div id="map_navi_row">
+
                     </div>
                 </div>
-            </div>
-            <div class="text-center">
-                <img class="img-fluid" src="assets/img/map.PNG" alt="">
-            </div>
-            <div class="text-center">
-                <img class="img-fluid" src="assets/img/loca.PNG" alt="">
-            </div>
+                <div class="text-center">
+                    <img class="img-fluid" src="assets/img/map.PNG" alt="">
+                </div>
+                <div class="text-center">
+                    <img class="img-fluid" src="assets/img/loca.PNG" alt="">
+                </div>
 
-        </div>
+            </div>
     </section>
 
 
@@ -222,7 +230,35 @@
 
     <!-- Map Section End -->
 
+    <!-- Footer Section Start -->
+    <footer class="footer-area section-padding">
+        <div class="container">
+            <div class="row">
 
+                <div class="col-md-12">
+                    <div class="footer-text text-center">
+                        <ul class="social-icon">
+                            <li>
+                                <a class="facebook" href="#"><i class="lni-facebook-filled"></i></a>
+                            </li>
+                            <li>
+                                <a class="twitter" href="#"><i class="lni-twitter-filled"></i></a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="#"><i class="lni-instagram-filled"></i></a>
+                            </li>
+                            <li>
+                                <a class="instagram" href="#"><i class="lni-google-plus"></i></a>
+                            </li>
+                        </ul>
+                        <p>Copyright © 2018
+                            <a href="www.uideck.com"></a>| Crafted by <a href="#" target="_blank">UIdeck</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- Footer Section End -->
 
     <!-- Go to Top Link -->
     <a href="#" class="back-to-top">
@@ -255,6 +291,165 @@
     <script src="assets/js/stickymate.js"></script>
     <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"> -->
     <!-- </script> -->
+    <script>
+        var store_url = "http://"
+
+        function launch(appname, url) {
+
+            var isAPPLE = (navigator.userAgent.match('iP') != null)
+
+            // 애플
+            if (isAPPLE) {
+
+                location.href = url
+
+                var clickedAt = +new Date;
+                appCheckTimer = setTimeout(function() {
+
+                    if (+new Date - clickedAt < 2000) {
+
+                        store_url = "http://itunes.apple.com/kr/app/"
+                        if (appname == "navermap") store_url += "id311867728?mt=8"
+                        if (appname == "daummap") store_url += "id304608425?mt=8"
+                        if (appname == "kimgisa") store_url += "id417698849?mt=8"
+
+                        if (confirm("앱이 설치되어 있지 않습니다. \n설치페이지로 이동할까요?")) {
+                            location.href = store_url
+                        }
+
+                    }
+
+                }, 1500)
+
+            }
+
+            // 안드로이드
+            else {
+
+                store_url = "market://details?id="
+                if (appname == "navermap") store_url += "com.nhn.android.nmap"
+                if (appname == "daummap") store_url += "net.daum.android.map"
+                if (appname == "kimgisa") store_url += "com.locnall.KimGiSa"
+
+                document.checkframe.location = url
+
+                var b = new Date()
+                setTimeout(function() {
+                    if (new Date() - b < 1500) {
+                        if (confirm("앱이 설치되있지 않습니다. \n설치페이지로 이동할까요?")) {
+                            location.href = store_url
+                        }
+                    }
+                }, 500);
+
+
+            }
+
+        }
+
+
+
+        function launch(appname, url) {
+
+            var isAPPLE = (navigator.userAgent.match('iP') != null)
+
+            // 애플
+            if (isAPPLE) {
+
+                location.href = url
+
+                var clickedAt = +new Date;
+                appCheckTimer = setTimeout(function() {
+
+                    if (+new Date - clickedAt < 2000) {
+
+                        store_url = "http://itunes.apple.com/kr/app/"
+                        if (appname == "navermap") store_url += "id311867728?mt=8"
+                        if (appname == "daummap") store_url += "id304608425?mt=8"
+                        if (appname == "kimgisa") store_url += "id417698849?mt=8"
+
+                        if (confirm("앱이 설치되어 있지 않습니다. \n설치페이지로 이동할까요?")) {
+                            location.href = store_url
+                        }
+
+                    }
+
+                }, 1500)
+
+            }
+
+            // 안드로이드
+            else {
+
+                store_url = "market://details?id="
+                if (appname == "navermap") store_url += "com.nhn.android.nmap"
+                if (appname == "daummap") store_url += "net.daum.android.map"
+                if (appname == "kimgisa") store_url += "com.locnall.KimGiSa"
+
+                document.checkframe.location = url
+
+                var b = new Date()
+                setTimeout(function() {
+                    if (new Date() - b < 1500) {
+                        if (confirm("앱이 설치되있지 않습니다. \n설치페이지로 이동할까요?")) {
+                            location.href = store_url
+                        }
+                    }
+                }, 500);
+
+
+            }
+
+        }
+        // 김기사 공식 URL : http://send.cangoto.com:8888/web/kimgisa/openapi/addpoi.jsp?name=%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4&coord_type=wgs84&pos_x=127.12246451531&pos_y=37.3873395397425&key=d5c2bdecc9cf4ba8b0001a5b493a2713&dwflag=N
+        // 티맵 공식 URL : http://m.tmap.co.kr/tmap2/mobile/route.jsp?name=SKT타워&lon=126.984098&lat=37.566385
+        // 티맵 수정 : href="./navi/tmap/?name=라온스퀘어&posx=127.12246451531&posy=37.3873395397425"
+    </script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
+    <script type="text/javascript">
+        Kakao.init('13da3914377346b0b8f74f5309b49dad');
+
+        function kakao_navi() {
+            if (is_pc == '1') {
+                alert('모바일 기기 전용 기능입니다')
+            }
+            Kakao.Navi.start({
+                name: '%EB%9D%BC%EC%98%A8%EC%8A%A4%ED%80%98%EC%96%B4',
+                x: 127.12246451531,
+                y: 37.3873395397425,
+                coordType: 'wgs84'
+            });
+        }
+
+        function app_install(appname) {
+
+            var isAPPLE = (navigator.userAgent.match('iP') != null)
+
+            // 애플
+            if (isAPPLE) {
+                store_url = "http://itunes.apple.com/kr/app/"
+                if (appname == "navermap") store_url += "id311867728?mt=8"
+                if (appname == "daummap") store_url += "id304608425?mt=8"
+                if (appname == "kimgisa") store_url += "id417698849?mt=8"
+                if (appname == "tmap") store_url += "id431589174?mt=8"
+                if (appname == "atlan") store_url += "id542287735?mt=8"
+            }
+
+            // 안드로이드
+            else {
+                store_url = "market://details?id="
+                if (appname == "navermap") store_url += "com.nhn.android.nmap"
+                if (appname == "daummap") store_url += "net.daum.android.map"
+                if (appname == "kimgisa") store_url += "com.locnall.KimGiSa"
+                    //if(appname=="tmap") store_url+="com.skt.skaf.l001mtm092"
+                if (appname == "tmap") store_url += "com.skt.tmap.ku"
+                if (appname == "atlan") store_url += "kr.mappers.AtlanSmart"
+            }
+
+            window.open(store_url)
+
+        }
+    </script>
 
 </body>
 
