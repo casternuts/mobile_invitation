@@ -1433,6 +1433,7 @@ a.back-to-top:focus {
 .slide-up-wrap {
 /*     height: 300vh; */
     min-height: -webkit-fill-available;
+     height: 2500px;
     align-items: center;
     justify-content: center;
     margin-top: 10px;
