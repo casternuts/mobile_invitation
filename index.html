@@ -121,7 +121,7 @@
 
     <!-- Intro Section Start -->
     <section id='header-wrap' class="background-change-wrap">
-        <div>
+         <div class="card">
             <img src="assets/img/intro.jpg" alt="Card image cap">
 
 
@@ -148,7 +148,7 @@
             <img src="assets/img/5.jpg" alt="" />
         </div>
     </section> -->
-    <section id="services" class="need-small-margin up-on-scroll section-padding">
+    <section id="services" class="need-small-margin up-on-scroll section-padding" >
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-8 col-xs-12 text-center">
@@ -157,12 +157,12 @@
                 </div>
             </div>
 
-            <div class="text-center">
-                <img class="img-fluid" src="assets/img/pic1.jpg" alt="">
+            <div class="text-center" style="width:100%; height:auto;">
+                <img class="img" src="assets/img/pic1.jpg" style="max-width:100%; height:auto;"alt="">
             </div>
         </div>
     </section>
-    <section class="need-small-margin up-on-scroll">
+    <section class="need-small-margin up-on-scroll" style="padding-top: 15vh;">
         <div class="container-fluid">
             <div class="row">
 
@@ -188,15 +188,13 @@
     </section>
     <section class="section-padding">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-md-8 col-lg-8 col-xs-12 text-center">
-
-
-                </div>
-            </div>
+       
 
             <div class="text-center">
-                <img class="img-fluid" src="assets/img/calender.jpg" alt="">
+                <img class="img-fluid" src="assets/img/calender.jpg" alt="" style="
+    max-width: 100%;
+    height: auto;
+">
             </div>
         </div>
     </section>
@@ -214,39 +212,71 @@
             </div>
             <div class="row justify-content-center">
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/8.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/8.jpg" alt="Card image cap" onclick="openModal();currentSlide(1)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/2.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/2.jpg" alt="Card image cap" onclick="openModal();currentSlide(2)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/10.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/10.jpg" alt="Card image cap" onclick="openModal();currentSlide(3)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/11.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/11.jpg" alt="Card image cap" onclick="openModal();currentSlide(4)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/9.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/9.jpg" alt="Card image cap" onclick="openModal();currentSlide(5)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/6.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/6.jpg" alt="Card image cap" onclick="openModal();currentSlide(6)">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/5.jpg" alt="Card image cap">
+                    <img class="card-img-top gallery-img" src="assets/img/5.jpg" alt="Card image cap" onclick="openModal();currentSlide(7)">
                 </div>
             </div>
-            <!-- The Modal -->
-            <div id="myModal" class="modal">
+         <!-- The Modal/Lightbox -->
+<div id="myModal" class="modal">
+  <span class="close cursor" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
 
-                <!-- The Close Button -->
-                <span class="close">&times;</span>
+    <div class="mySlides">
+      <div class="numbertext">1 / 7</div>
+      <img src="assets/img/8.jpg" style="width:100%">
+    </div>
 
-                <!-- Modal Content (The Image) -->
-                <img class="modal-content center-block" id="img01">
+    <div class="mySlides">
+      <div class="numbertext">2 / 7</div>
+      <img src="assets/img/2.jpg" style="width:100%">
+    </div>
 
+    <div class="mySlides">
+      <div class="numbertext">3 / 7</div>
+      <img src="assets/img/10.jpg" style="width:100%">
+    </div>
 
-            </div>
+    <div class="mySlides">
+      <div class="numbertext">4 / 7</div>
+      <img src="assets/img/11.jpg" style="width:100%">
+    </div>
+	  <div class="mySlides">
+      <div class="numbertext">5 / 7</div>
+      <img src="assets/img/9.jpg" style="width:100%">
+    </div>
+	  <div class="mySlides">
+      <div class="numbertext">6 / 7</div>
+      <img src="assets/img/6.jpg" style="width:100%">
+    </div>
+	  <div class="mySlides">
+      <div class="numbertext">7 / 7</div>
+      <img src="assets/img/5.jpg" style="width:100%">
+    </div>
 
+    <!-- Next/previous controls -->
+    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+    <!-- Caption text -->
+ 
+	</div>
 
         </div>
     </section>
@@ -567,7 +597,48 @@
         infowindow.open(map, marker);
     </script>
 
+<script>
+// Open the Modal
+function openModal() {
+  document.getElementById("myModal").style.display = "block";
+}
 
+// Close the Modal
+function closeModal() {
+  document.getElementById("myModal").style.display = "none";
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+ // dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
 </body>
 
 
