@@ -45,6 +45,10 @@
     <!-- Responsive Style -->
     <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 
+
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.css">
+    <link rel="stylesheet" type="text/css" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+
 </head>
 <script>
 </script>
@@ -121,7 +125,7 @@
 
     <!-- Intro Section Start -->
     <section id='header-wrap' class="background-change-wrap">
-         <div class="card">
+        <div>
             <img src="assets/img/intro.jpg" alt="Card image cap">
 
 
@@ -148,7 +152,7 @@
             <img src="assets/img/5.jpg" alt="" />
         </div>
     </section> -->
-    <section id="services" class="need-small-margin up-on-scroll section-padding" >
+    <section id="services" class="need-small-margin up-on-scroll section-padding">
         <div class="container">
             <div class="row justify-content-center">
                 <div class="col-md-8 col-lg-8 col-xs-12 text-center">
@@ -157,28 +161,95 @@
                 </div>
             </div>
 
-            <div class="text-center" style="width:100%; height:auto;">
-                <img class="img" src="assets/img/pic1.jpg" style="max-width:100%; height:auto;"alt="">
+            <div class="text-center">
+                <img class="img-fluid" src="assets/img/pic1.jpg" alt="">
             </div>
         </div>
     </section>
-    <section class="need-small-margin up-on-scroll" style="padding-top: 15vh;">
+    <section class="need-small-margin up-on-scroll">
         <div class="container-fluid">
-            <div class="row">
+            <div class="row" style="padding:10px;">
 
-                <div class="col-xs-3" style="flex:1;margin:3px; padding:3px;width:22%;text-align: center;background-color: #5674b9; border-radius: 15%;"><a class="facebook" href="tel:010-2227-4783"><i class="lni lni-phone" style="font-size: large; color: white;"></i></a>
-                    <div style="color: white; font-weight: bold; font-size:smaller;">신랑 </div>
+                <div class="col-xs-6" style='width: 40%; text-align: center;'>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>신랑</span>
+                        <span class='kopub-b' style="font-size: large; padding-left:5px;">홍영기</span>
+                    </div>
+
                 </div>
-                <div class="col-xs-3" style="flex:1;margin:3px;padding:3px;width:22%;text-align: center;background-color: #5674b9; border-radius: 15%;"><a class="facebook" href="tel:010-6736-4783"><i class="lni lni-phone" style="font-size: large; color: white;"></i></a>
-                    <div style="color: white; font-weight: bold; font-size:smaller;">신랑 혼주 </div>
+                <div class="col-xs-6" style='width: 60%; text-align: end;'>
+                    <a class="icon-con" href="tel:010-2227-4783"><img class='contact-i' src='assets/img/phone.png'></img>
+                    </a>
+                    <a class="icon-con" href="sms:010-2227-4783"><img class='contact-i' src='assets/img/msg.png'></img>
+                    </a>
                 </div>
-                <div class="col-xs-3" style="flex:1;margin:3px;padding:3px;width:22%;text-align: center;background-color: #fd4976; border-radius: 15%;"><a class="facebook" href="tel:010-4052-0719"><i class="lni lni-phone" style="font-size: large; color: white;"></i></a>
-                    <div style="color: white; font-weight: bold; font-size:smaller;">신부 </div>
-                </div>
-                <div class="col-xs-3" style="flex:1;margin:3px;padding:3px;width:22%;text-align: center;background-color: #fd4976; border-radius: 15%;"><a class="facebook" href="tel:010-7212-1686"><i class="lni lni-phone" style="font-size: large; color: white;"></i></a>
-                    <div style="color: white; font-weight: bold; font-size:smaller;">신부 혼주 </div>
-                </div>
+
             </div>
+            <div class="row" style="padding:10px;">
+
+                <div class="col-xs-6" style='width: 40%; text-align: center;'>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>신부</span>
+                        <span style="font-size: large; padding-left:5px;">정영선</span>
+                    </div>
+
+                </div>
+                <div class="col-xs-6" style='width: 60%; text-align: end;'>
+                    <a class="icon-con" href="tel:010-4052-0719"><img class='contact-i' src='assets/img/phone.png'></img>
+                    </a>
+                    <a class="icon-con" href="sms:010-4052-0719"><img class='contact-i' src='assets/img/msg.png'></img>
+                    </a>
+                </div>
+
+            </div>
+            <div class="row" style="padding:10px; height:10vh;">
+                <div class="col-xs-6" style='width: 50%; text-align: center;     border-right: 1px solid;'></div>
+                <div class="col-xs-6" style='width: 50%; text-align: center;'></div>
+            </div>
+            <div class="row" style="padding:10px; height:100%; margin-bottom:10px;">
+                <div class="col-xs-6" style='width: 50%; text-align: center;'>
+                    <p class='gray-color'>신랑 측 혼주</p>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>아버지</span>
+                        <span style="font-size: large; padding-left:5px;">홍성배</span>
+                        <div class="col-xs-12" style='width: 100%; text-align: center;'>
+                            <a class="icon-con-parent" href="tel:010-6736-4783"><img class='contact-i' src='assets/img/phone.png'></img>
+                            </a>
+                            <a class="icon-con-parent" href="sms:010-6736-4783"><img class='contact-i' src='assets/img/msg.png'></img>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>어머니</span>
+                        <span style="font-size: large; padding-left:5px;">이순임</span>
+                        <div class="col-xs-12" style='width: 100%; text-align: center;'>
+                            <a class="icon-con-parent" href="tel:010-5439-5960"><img class='contact-i' src='assets/img/phone.png'></img>
+                            </a>
+                            <a class="icon-con-parent" href="sms:010-5439-5960"><img class='contact-i' src='assets/img/msg.png'></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6" style='width: 50%; text-align: center;'>
+                    <p class='gray-color'>신부 측 혼주</p>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>아버지</span>
+                        <span style="font-size: large; padding-left:5px;">정성택</span>
+                        <div class="col-xs-12" style='width: 100%; text-align: center;'>
+                            <a class="icon-con-parent" href="tel:010-7212-1686"><img class='contact-i' src='assets/img/phone.png'></img>
+                            </a>
+                            <a class="icon-con-parent" href="sms:010-7212-1686"><img class='contact-i' src='assets/img/msg.png'></img>
+                            </a>
+                        </div>
+                    </div>
+                    <div style="padding: 5px;margin-left:10px;"><span class='gray-color'>어머니</span>
+                        <span style="font-size: large; padding-left:5px;">박미숙</span>
+                        <div class="col-xs-12" style='width: 100%; text-align: center;'>
+                            <a class="icon-con-parent" href="tel:010-7212-4783"><img class='contact-i' src='assets/img/phone.png'></img>
+                            </a>
+                            <a class="icon-con-parent" href="sms:010-7212-4783"><img class='contact-i' src='assets/img/msg.png'></img>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
 
         </div>
         </div>
@@ -188,13 +259,15 @@
     </section>
     <section class="section-padding">
         <div class="container">
-       
+            <div class="row justify-content-center">
+                <div class="col-md-8 col-lg-8 col-xs-12 text-center">
+
+
+                </div>
+            </div>
 
             <div class="text-center">
-                <img class="img-fluid" src="assets/img/calender.jpg" alt="" style="
-    max-width: 100%;
-    height: auto;
-">
+                <img class="img-fluid" src="assets/img/calender.jpg" alt="">
             </div>
         </div>
     </section>
@@ -212,74 +285,58 @@
             </div>
             <div class="row justify-content-center">
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/8.jpg" alt="Card image cap" onclick="openModal();currentSlide(1)">
+                    <img class="card-img-top gallery-img" src="assets/img/8.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/2.jpg" alt="Card image cap" onclick="openModal();currentSlide(2)">
+                    <img class="card-img-top gallery-img" src="assets/img/2.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/10.jpg" alt="Card image cap" onclick="openModal();currentSlide(3)">
+                    <img class="card-img-top gallery-img" src="assets/img/10.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/11.jpg" alt="Card image cap" onclick="openModal();currentSlide(4)">
+                    <img class="card-img-top gallery-img" src="assets/img/11.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/9.jpg" alt="Card image cap" onclick="openModal();currentSlide(5)">
+                    <img class="card-img-top gallery-img" src="assets/img/9.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/6.jpg" alt="Card image cap" onclick="openModal();currentSlide(6)">
+                    <img class="card-img-top gallery-img" src="assets/img/6.jpg" alt="Card image cap">
                 </div>
                 <div class="card">
-                    <img class="card-img-top gallery-img" src="assets/img/5.jpg" alt="Card image cap" onclick="openModal();currentSlide(7)">
+                    <img class="card-img-top gallery-img" src="assets/img/5.jpg" alt="Card image cap">
                 </div>
+
             </div>
-         <!-- The Modal/Lightbox -->
-<div id="myModal" class="modal">
-  <span class="close cursor" onclick="closeModal()">&times;</span>
-  <div class="modal-content">
+            <!-- The Modal -->
+            <div id="myModal" class="modal">
 
-    <div class="mySlides">
-      <div class="numbertext">1 / 7</div>
-      <img src="assets/img/8.jpg" style="width:100%">
-    </div>
+                <!-- The Close Button -->
+                <span class="close">&times;</span>
 
-    <div class="mySlides">
-      <div class="numbertext">2 / 7</div>
-      <img src="assets/img/2.jpg" style="width:100%">
-    </div>
+                <!-- Modal Content (The Image) -->
+                <!-- Slider main container -->
+                <!-- Swiper -->
 
-    <div class="mySlides">
-      <div class="numbertext">3 / 7</div>
-      <img src="assets/img/10.jpg" style="width:100%">
-    </div>
+                <div class="bxslider">
+                    <li><img class="" src="assets/img/8.jpg" alt="Card image cap"></li>
+                    <li><img class="slider-pic-y10" src="assets/img/2.jpg" alt="Card image cap"></li>
+                    <li><img class="slider-pic-y60" src="assets/img/10.jpg" alt="Card image cap"></li>
+                    <li><img class="slider-pic-y" src="assets/img/11.jpg" alt="Card image cap"></li>
+                    <li><img class="slider-pic-y60" src="assets/img/9.jpg" alt="Card image cap"></li>
+                    <li><img class="" src="assets/img/6.jpg" alt="Card image cap"></li>
+                    <li><img class="" src="assets/img/5.jpg" alt="Card image cap"></li>
 
-    <div class="mySlides">
-      <div class="numbertext">4 / 7</div>
-      <img src="assets/img/11.jpg" style="width:100%">
-    </div>
-	  <div class="mySlides">
-      <div class="numbertext">5 / 7</div>
-      <img src="assets/img/9.jpg" style="width:100%">
-    </div>
-	  <div class="mySlides">
-      <div class="numbertext">6 / 7</div>
-      <img src="assets/img/6.jpg" style="width:100%">
-    </div>
-	  <div class="mySlides">
-      <div class="numbertext">7 / 7</div>
-      <img src="assets/img/5.jpg" style="width:100%">
-    </div>
+                </div>
 
-    <!-- Next/previous controls -->
-    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-    <a class="next" onclick="plusSlides(1)">&#10095;</a>
 
-    <!-- Caption text -->
- 
-	</div>
 
-        </div>
+
+
+
+            </div>
+
     </section>
+
 
 
 
@@ -320,6 +377,8 @@
     </section>
 
 
+
+
     <!-- Contact Section End -->
 
 
@@ -329,7 +388,21 @@
     <footer class="footer-area section-padding">
         <div class="container">
             <div class="row">
+                <div class="col-md-12">
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">홍성배(농협)/235041-51-069248</p>
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">정성택(농협)/235088-52-043824</p>
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">이순임(농협)/356-0439-8006-93</p>
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">박미숙(농협)/****-**-*******</p>
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">홍영기(신한)/110-331-521247</p>
+                    <h6 class='kopub-b' style="color:#fff">마음 전할 곳</h6>
+                    <p style="color:rgb(238, 238, 238); font-size: 15px; padding-bottom: 5px;">정영선(우리)/100-294-3168125</p>
 
+                </div>
                 <div class="col-md-12">
                     <div class="footer-text text-center">
                         <ul class="social-icon">
@@ -370,13 +443,61 @@
     <script src="assets/js/jquery.slicknav.js"></script>
     <script src="assets/js/main.js"></script>
 
-    <script src="assets/js/map.js"></script>
+
     <script src="assets/js/index.js"></script>
     <script src="assets/js/stickymate.js"></script>
-    <!-- <script type="text/javascript" src="//maps.googleapis.com/maps/api/js?key=AIzaSyCsa2Mi2HqyEcEnM1urFSIGEpvualYjwwM"> -->
-    <!-- </script> -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bxslider/4.2.15/jquery.bxslider.min.css" rel="stylesheet" />
+
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <script>
+        mySlider = $('.bxslider').bxSlider({
+
+            easing: 'easeInCubic',
+
+            displaySlideQty: 3,
+            adaptiveHeight: false,
+            moveSlideQty: 1,
+
+            infiniteLoop: false,
+
+            hideControlOnEnd: true
+
+        });
+
+        // Get the modal
+        var modal = document.getElementById("myModal");
+
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+        var img = document.querySelectorAll(".gallery-img");
+        //var modalImg = document.getElementById("img01");
+        var captionText = document.getElementById("caption");
+        for (let i in img) {
+            img[i].onclick = function() {
+                modal.style.display = "block";
+                mySlider.reloadSlider();
+
+
+            }
+
+        }
+
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+
+
+
+
         var store_url = "http://"
+
 
         function launch(appname, url) {
 
@@ -491,31 +612,6 @@
     </script>
     <script src="https://developers.kakao.com/sdk/js/kakao.min.js"></script>
     <script type="text/javascript">
-        // Get the modal
-        var modal = document.getElementById("myModal");
-
-        // Get the image and insert it inside the modal - use its "alt" text as a caption
-        var img = document.querySelectorAll(".gallery-img");
-        var modalImg = document.getElementById("img01");
-        var captionText = document.getElementById("caption");
-        for (let i in img) {
-            img[i].onclick = function() {
-                modal.style.display = "block";
-                modalImg.src = this.src;
-                captionText.innerHTML = this.alt;
-            }
-
-        }
-
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() {
-            modal.style.display = "none";
-        }
-
         //'13da3914377346b0b8f74f5309b49dad'
         Kakao.init('3039813ca47b6ef3d515a98fb4bb8d0e');
 
@@ -597,48 +693,7 @@
         infowindow.open(map, marker);
     </script>
 
-<script>
-// Open the Modal
-function openModal() {
-  document.getElementById("myModal").style.display = "block";
-}
 
-// Close the Modal
-function closeModal() {
-  document.getElementById("myModal").style.display = "none";
-}
-
-var slideIndex = 1;
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("mySlides");
-  var dots = document.getElementsByClassName("demo");
-  var captionText = document.getElementById("caption");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
- // dots[slideIndex-1].className += " active";
-  captionText.innerHTML = dots[slideIndex-1].alt;
-}
-</script>
 </body>
 
 
