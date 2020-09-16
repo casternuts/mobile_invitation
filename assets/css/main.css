@@ -33,7 +33,7 @@ h3,
 h4 {
     font-size: 36px;
     font-weight: 700;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'KoPub Batang', serif;
 }
 
 a {
@@ -1686,7 +1686,7 @@ a.back-to-top:focus {
     /* Stay in place */
     z-index: 9999999999;
     /* Sit on top */
-    padding-top: 15%;
+    padding-top: 5%;
     /* Location of the box */
     left: 0;
     top: 0;
@@ -1745,7 +1745,6 @@ a.back-to-top:focus {
 
 .icon-con {
     padding-left: 10px;
-    padding-right: 10px;
 }
 
 .icon-con-parent {
