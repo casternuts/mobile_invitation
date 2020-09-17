@@ -24,7 +24,7 @@
     <meta property="og:site_name" content="github.io">
     <meta property="og:url" content="https://https://casternuts.github.io/mobile_invitation/">
     <meta property="og:title" content="홍영기♡정영선의 모바일청첩장">
-    <meta property="og:image" content="https://casternuts.github.io/mobile_invitation/assets/img/intro.jpg
+    <meta property="og:image" content="https://casternuts.github.io/mobile_invitation/assets/img/11.jpg
     ">
 
 
@@ -411,7 +411,7 @@
     <footer class="footer-area " style="padding:5px 0px 20px 0px;">
         <div class="container">
             <div class="row">
-                <!-- <button onclick="getBoardList()">dddd</button> -->
+                <button onclick="makeKakaoLink()">dddd</button>
                 <div class="col-md-12">
                     <div class="footer-text text-center">
                         <ul class="social-icon">
@@ -462,34 +462,6 @@
 
 
     <script>
-        function getBoardList() {
-            //var iframeEle = $('iframe');
-            //var framebody = iframeEle.contentWindow.document.body;
-            // console.log(framebody)
-            // $.ajaxSetup({
-            //     scriptCharset: "utf-8", //or "ISO-8859-1"
-            //     contentType: "application/json; charset=utf-8"
-            // });
-
-            // $.getJSON('http://whateverorigin.org/get?url=' +
-            //     encodeURIComponent('http://bojagicard.com/g/home.php?ecard=jungwkd1686') + '&callback=?',
-            //     function(data) {
-            //         console.log("> ", data);
-
-            //         //If the expected response is text/plain
-            //         //$("#viewer").html(data.contents);
-
-            //         //If the expected response is JSON
-            //         //var response = $.parseJSON(data.contents);
-            //     });
-
-
-
-        }
-
-
-
-
         // jQuery.ajax({
         //     url: "http://bojagicard.com/g/home.php?ecard=jungwkd1686",
         //     type: "get",
@@ -693,7 +665,17 @@
             window.open(store_url)
 
         }
+
+        function makeKakaoLink() {
+
+            Kakao.Link.sendCustom({
+                templateId: 36826 // 15번 항목에서 확인하였던 이벤트번호 등록 
+            });
+
+
+        }
     </script>
+
 
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=3039813ca47b6ef3d515a98fb4bb8d0e"></script>
     <script>
