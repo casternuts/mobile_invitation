@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Jisti Lib POC</title>
+    <style>
+        .video-container {
+            position: relative;
+        }
+        
+        .video-container .microphone-btn {
+            position: absolute;
+            top: 0;
+            right: 100px;
+        }
+        
+        .video-container .camera-btn {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    </style>
+    <script src="./js/jquery-3.5.1.min.js"></script>
+    <script src="./js/lib-jitsi-meet.min.js"></script>
+    <script src="./js/i-jitsi-track.js"></script>
+    <script src="./js/i-jitsi-conference.js"></script>
+
+    <script src="./js/main.js"></script>
+</head>
+
+<body>
+    <div id="jitsi-room" style="display: none;">
+        JITSI ROOM
+        <div id="jitsi-tracks">
+            <div id="jitsi-video-tracks"></div>
+            <div id="jitsi-audio-tracks"></div>
+        </div>
+    </div>
+</body>
+
+</html>
